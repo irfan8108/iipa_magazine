@@ -26,5 +26,34 @@ class FrontController extends Controller
         return view('front.article-details', $data);
     }
 
+    public function search(Request $request){
+        if ($request->isMethod('get')) {
+            $data['magazines'] = null ;
+            // dd('working');
+            return view('front.search-page', $data);
+        }else{
+            // dd($request->all());
+            $search = $request->input('search');
+            if($search != ''){
+                if($request->type=='magazine_title'){
+                $data['magazines'] =Blog::where('title','like','%'.$search.'%')->get();
+                }
+                if($request->type=='magazine_date'){
+                $data['magazines'] =Blog::where('created_at','like','%'.$search.'%')->get();
+                // dd('uhfurh');
+                }
+                if($request->type=='magazine_editor'){
+                $data['magazines'] =Blog::where('editor','like','%'.$search.'%')->get();
+                }
+                if(count($data)>0){
+                    return view('front.search-page', $data);
+                }
+            }else{
+                return back();
+            }
+
+        }
+
+    }    
 
 }

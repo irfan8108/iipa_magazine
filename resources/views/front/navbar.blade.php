@@ -52,21 +52,21 @@
         </div> -->
 
         <div class="modal-body">
-          
+          <form action="{{ route('search_data') }}" method="post">
+            @csrf
             <div class="row">
                 
-                <select class="searchbar searchtype">
-                    <option>Name of Magazine</option>
-                    <option>Date of Publication</option>
-                    <option>Month of Publication</option>
-                    <option>Year of Publication</option>
-                    <option>Subject</option>
-                    <option>Title</option>
-                    <option>Author Name</option>
-                    <option>Populars</option>
+                <select class="searchbar searchtype" name="type">
+                    <option value="magazine_title">Name of Magazine</option>
+                    <option value="magazine_date">Date of Publication</option>
+                    <option value="magazine_date">Month of Publication</option>
+                    <option value="magazine_date">Year of Publication</option>
+                    <option value="magazine_title">Subject</option>
+                    <option value="magazine_title">Title</option>
+                    <option value="magazine_editor">Author Name</option>
                 </select>
                 
-                <input class="searchbar searchtext" type="text" placeholder="Type to search..." class="searchbar">
+                <input class="searchbar searchtext" type="text" name="search" placeholder="Type to search..." class="searchbar">
                 
                 <div class="searcMagazineModalBtn">
                     <button type="submit" class="close_modal">
@@ -76,7 +76,8 @@
                 </div>
 
             </div>
-
+          </form>
+            
         </div>
         
         <!-- <div class="modal-footer">
