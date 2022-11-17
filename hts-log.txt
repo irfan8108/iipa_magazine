@@ -1,0 +1,21 @@
+HTTrack3.49-2 launched on Tue, 06 Sep 2022 14:11:41 at https://codervent.com/synadmin/demo/vertical/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -w https://codervent.com/synadmin/demo/vertical/ -O "/home/irfanali/websites/inventory" -n -%P -N0 -s2 -p7 -D -a -K0 -c4 -%k -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:16:24	Error: 	"Forbidden" (403) at link via.placeholder.com/120x120 (from https://codervent.com/synadmin/demo/vertical/content-text-utilities.html)
+14:16:24	Error: 	"Forbidden" (403) at link via.placeholder.com/150x75 (from https://codervent.com/synadmin/demo/vertical/content-text-utilities.html)
+14:16:24	Error: 	"Not Found" (404) at link https://codervent.com/synadmin/demo/vertical/authentication-login.html (from https://codervent.com/synadmin/demo/vertical/authentication-reset-password.html)
+14:16:24	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://codervent.com/synadmin/demo/vertical/assets/plugins/highcharts/js/highcharts.js
+14:16:25	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://codervent.com/synadmin/demo/vertical/assets/plugins/apexcharts-bundle/js/apexcharts.min.js
+14:16:44	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://codervent.com/synadmin/demo/vertical/assets/plugins/fullcalendar/js/main.min.js
+14:17:36	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://codervent.com/synadmin/demo/vertical/assets/plugins/datatable/js/jquery.dataTables.min.js
+14:17:36	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://cdn.tiny.cloud/1/invalid-origin/tinymce/5.10.5-131/tinymce.min.js
+14:26:19	Error: 	"Not Found" (404) at link https://codervent.com/synadmin/demo/vertical/assets/images/products/16.png (from https://codervent.com/synadmin/demo/vertical/index2.html)
+14:26:24	Error: 	"Forbidden" (403) at link https://cdn.searchenginejournal.com/wp-content/uploads/2019/03/shutterstock_1338315902.png (from https://codervent.com/synadmin/demo/vertical/errors-404-error.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 14 minutes 43 seconds : 793 links scanned, 790 files written (75414606 bytes overall) [66561835 bytes received at 75381 bytes/sec], 13004826 bytes transferred using HTTP compression in 164 files, ratio 29%, 9.7 requests per connection
+(5 errors, 5 warnings, 0 messages)
