@@ -11,7 +11,7 @@
                 <a class="navbar-brand" href="{{ route('index') }}" style="margin-left: 0;">IIPA <span>Magazine</span></a>
 
                 <!-- Trigger the modal with a button -->
-                <a href="javascript:void(0)" class="searcMagazineModalBtn" data-toggle="modal" data-target="#searcMagazineModal">
+                <a href="javascript:void(0)" class="searcMagazineModalBtn search_btn_nav" data-toggle="modal" data-target="#searcMagazineModal">
                     <img src="{{ asset('images/search_icon.png') }}">
                 </a>
 
@@ -20,7 +20,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ route('index') }}">Home</a></li>
                     <li><a href="{{ route('index') }}">Magazines</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="{{ route('about') }}">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
           <h4 class="modal-title">Modal Header</h4>
         </div> -->
 
-        <div class="modal-body">
+        <div class="modal-body nav_modal">
           <form action="{{ route('search_data') }}" method="post">
             @csrf
             <div class="row">
@@ -69,10 +69,10 @@
                 <input class="searchbar searchtext" type="text" name="search" placeholder="Type to search..." class="searchbar">
                 
                 <div class="searcMagazineModalBtn">
-                    <button type="submit" class="close_modal">
+                    <button type="button" class="close_modal">
                         <img src="{{ asset('images/close_icon.png') }}">
                     </button>
-                    <button type="submit"><img src="{{ asset('images/search_icon.png') }}"></button>
+                    <button type="submit" class="search_btn"><img src="{{ asset('images/search_icon.png') }}"></button>
                 </div>
 
             </div>
