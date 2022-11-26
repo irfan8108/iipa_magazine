@@ -44,7 +44,7 @@
       </div>
      {{--  <div class="share-wraper">
         <a href="#"><i class="fa fa-twitter" aria-hidden="true" title="twiter"></i></a>
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true" title="facebook"></i></a>
+        <a href="https://www.facebook.com/sharer.php?u=https://www.iipa.org.in"><i class="fa fa-facebook" aria-hidden="true" title="facebook"></i></a>
         <a href="#"><i class="fa fa-share-alt" aria-hidden="true" title="Share"></i></a>
         <a href="{{ asset("uploads/blog/$blog->pdf") }}" target="_blank"><i class="fa fa-download" aria-hidden="true" title="Download"></i></a>
       </div> --}}
@@ -109,10 +109,11 @@
     <div class="col-xs-1 share-article sticky">
       <ul>
         <li>
-          <a href="https://twitter.com/iipa9/" target="_blank" title="twiter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https://www.iipa.org.in/cms/public&text={{ $blog->title }}" target="_blank" title="twiter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         </li>
-        <li><a href="https://www.linkedin.com/in/indian-institute-of-public-administration-iipa-3a3959222" target="_blank"><i class="fa fa-linkedin" aria-hidden="true" title="LinkedIn"></i></a>
+        <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.iipa.org.in/cms/public&title{{ $blog->title }}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true" title="LinkedIn"></i></a>
         </li>
+        <li><a href="https://www.facebook.com/sharer.php?u=https://www.iipa.org.in/cms/public" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
         <li><a href="https://www.youtube.com/channel/UCGuRg5wXYkJbobLLo6caBOw" target="_blank"><i class="fa fa-youtube" aria-hidden="true" title="Youtube"></i></a></li>       
       </ul>
     </div>

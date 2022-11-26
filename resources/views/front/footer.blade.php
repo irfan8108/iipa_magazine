@@ -82,8 +82,9 @@
           </nav>
           <div class="cta-container -align-horizontal -margin-tight icon">
             <ul id="top-social-menu-footer">
-              <li><a href="https://twitter.com/iipa9/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/indian-institute-of-public-administration-iipa-3a3959222" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://twitter.com/intent/tweet?url=https://www.iipa.org.in/cms/public" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.iipa.org.in/cms/public" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://www.facebook.com/sharer.php?u=https://www.iipa.org.in/cms/public" target="_blank"><i class="fa fa-facebook"></i></a></li>
               <li><a href="https://www.youtube.com/channel/UCGuRg5wXYkJbobLLo6caBOw" target="_blank"><i class="fa fa-youtube"></i></a></li>
               <li><a href="#"><i class="fa fa-envelope"></i></a></li>
             </ul>
