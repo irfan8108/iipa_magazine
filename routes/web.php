@@ -24,7 +24,7 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', [FrontController::class, 'index'])->name('index');
 Route::get('about', [FrontController::class, 'about'])->name('about');
-Route::get('magazine/articles{id}', [FrontController::class, 'article'])->name('article');
+Route::get('magazine/{id}', [FrontController::class, 'magazine'])->name('article');
 Route::any('magazine/search', [FrontController::class, 'search'])->name('search_data');
 
 

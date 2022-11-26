@@ -64,7 +64,13 @@
         @foreach($blog->articles as $key => $article )
         <div class="row article-row">
           {{-- {{ dd($key+1) }} --}}
-          <li class="tab_li {{ $key== 0 ? 'active' : '' }}" >
+          
+          @if($article_id)
+            <li class="tab_li {{ $article_id == $article->id ? 'active' : '' }}" >
+          @else
+            <li class="tab_li {{ $key== 0 ? 'active' : '' }}" >
+          @endif
+
             <div class="col-md-10 tab_article">
               <a href="#{{ $article->id }}" data-toggle="tab" >
                 <h5 class="a-t-clamp">{{ $article->title }}</h5>
@@ -94,10 +100,17 @@
     
     <div class="col-xs-8 tab_content">
       <!-- Tab panes -->
-      <div class="article tab-content">
+      <div class="article tab-content" style="padding-top: 70px;">
         @foreach($blog->articles as $key => $article )
-        <div class="tab-pane {{ $key== 0 ? 'active' : '' }}" id="{{ $article->id }}" >
-          <h2 class="blog-title">
+        
+
+        @if($article_id)
+          <div class="tab-pane {{ $article_id == $article->id ? 'active' : '' }}" id="{{ $article->id }}" >
+        @else
+          <div class="tab-pane {{ $key== 0 ? 'active' : '' }}" id="{{ $article->id }}" >
+        @endif
+
+          <h2 class="blog-title" id="article_{{$article->id}}">
               {{ $article->title }}
           </h2>
           <p class="description-blog">{!! htmlspecialchars_decode(ucfirst($article->description)) !!}</p>

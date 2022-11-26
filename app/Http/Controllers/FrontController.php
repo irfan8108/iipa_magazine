@@ -20,7 +20,13 @@ class FrontController extends Controller
         return view('front.index', $data);
     }
 
-    public function article(Request $request, $id){
+    public function magazine(Request $request, $id){
+
+        if($request->has('article_id'))
+            $data['article_id'] = $request->article_id;
+        else
+            $data['article_id'] = null;
+
         $data['blog'] = Blog::where('id', $id)->with('articles','writer')->first();
         // dd(($data['blog']->writer));
         return view('front.article-details', $data);
@@ -55,7 +61,19 @@ class FrontController extends Controller
             }
 
         }
+    }
 
-    }    
+    public function getSearchData(Request $request){
+        if($request->type == 'magazine_title'){
+            $data = Blog::select('id', 'title')->get();
+        }
+        if($request->type == 'magazine_editor'){
+            $data = Article::select('id', 'editor as title', 'blog_id')->get();
+        }
+
+        // dd($data);
+
+        return response()->json(['status' => $data ? true : false, 'data' => $data]);
+    }
 
 }
